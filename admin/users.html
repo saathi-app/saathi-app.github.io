@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Webpage description goes here" />
+    <meta charset="utf-8">
+    <title>Saathi App - Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid m-0" style="background-color: #c3b1e1;">
+        <nav class="navbar p-0" style="background-color: #c3b1e1;">
+            <div class="container-fluid p-0">
+                <div>
+                    <img style="max-width: 70px;" src="./../assets/icon.png" alt="Saati Logo">
+                    <h5 class="d-inline m-0" style="color: white; margin-left: -15px !important;">Saathi</h5>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h3 class="mt-2">APP USERS COLLECTION</h3>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <h4 style="color:cornflowerblue; cursor:pointer;" data-toggle="modal" data-target="#addUserModal"> + ADD
+                USER</h4>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p class="h6"> All Users</p>
+                <div class="row" id="allUsers">
+                    <!-- <div class="col-3 singleUser p-2 m-1 rounded" style="background-color: #f3edfd;">
+                        <p >Name: <span class="username">Divya</span> </p>
+                        <p >Type: <span class="userType">Student</span></p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+
+        <!-- EDIT Modal -->
+        <div class="modal fade" id="userDetailsModal" tabindex="-1" role="dialog"
+            aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="userDetailsModalLabel">View/ Edit Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="userType">Type</label>
+                            <input type="text" class="form-control" id="userType" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="userSchoolId">School ID</label>
+                            <input type="text" class="form-control" id="userSchoolId">
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">Name</label>
+                            <input type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="userMileStone">Milestone</label>
+                            <input type="text" class="form-control" id="userMileStone" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="userId">User ID</label>
+                            <input type="text" class="form-control" id="userId">
+                        </div>
+                        <div class="form-group">
+                            <label for="userDOB">User DOB</label>
+                            <input type="text" class="form-control" id="userDOB" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="userClass">Class</label>
+                            <input type="text" class="form-control" id="userClass">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p style="display:none;" class="taskDone">DONE</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary updateUser">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add USER Modal -->
+        <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="adduserType">Type</label>
+                            <input type="text" class="form-control" id="adduserType">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserSchoolId">School ID</label>
+                            <input type="text" class="form-control" id="adduserSchoolId">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserName">Name</label>
+                            <input type="text" class="form-control" id="adduserName">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserPassword">Password</label>
+                            <input type="text" class="form-control" id="adduserPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserId">User ID</label>
+                            <input type="text" class="form-control" id="adduserId">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserDOB">User DOB</label>
+                            <input type="date" class="form-control" id="adduserDOB">
+                        </div>
+                        <div class="form-group">
+                            <label for="adduserClass">Class</label>
+                            <input type="text" class="form-control" id="adduserClass">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary addUser">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container-fluid p-2 text-center" style="background-color: #c3b1e1;">
+        <p class="text- p-0 m-0">© 2023 Saathi App</p>
+    </div> -->
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js'
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js'
+        import { getFirestore, addDoc, collection, setDoc, query, where, getDocs, getDoc, doc, updateDoc, Timestamp, orderBy, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
+        const firebaseConfig = {
+            apiKey: "AIzaSyBUhZ4hRfdV9iPWrCNDk5a5UBQCRhVFGHc",
+            authDomain: "saathi-app-17ca5.firebaseapp.com",
+            projectId: "saathi-app-17ca5",
+            storageBucket: "saathi-app-17ca5.appspot.com",
+            messagingSenderId: "508810014252",
+            appId: "1:508810014252:web:a8bd4da59e9c7491f46b89",
+            measurementId: "G-TT3RCESYK0"
+        };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getFirestore(app);
+
+        // Constants
+        var USERS = {}
+        var CURRENT_USER_UID = "";
+
+        $(document).ready(async function () {
+            const userRef = collection(db, "users");
+            const q = query(userRef);
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                USERS[doc.id] = doc.data()
+                console.log(doc.id, " => ", doc.data());
+
+                //Set UI (dont chnage classes, order of classes for btn)
+                var html = $("#allUsers").html()
+                html = html + '<div class="col-3 singleUser singleUser-' + doc.id + ' p-2 m-1 rounded" style="background-color: #f3edfd;">' +
+                    '<p class="mt-2 mb-1">Name: <span class="username">' + USERS[doc.id]['name'] + '</span> </p>' +
+                    '<p>Type: <span class="userType">' + USERS[doc.id]['type'] + '</span></p>' +
+                    '<button type="button" class="btn text-left btn-info singleUserBtn singleUserBtn-' + doc.id + '"  data-toggle="modal" data-target="#userDetailsModal">Info</button>' +
+                    '</div>'
+                $("#allUsers").html(html)
+
+            });
+
+            //Set Event Listeners for info btn
+            $(".singleUserBtn").on('click', function () {
+                let allClasses = (this.className)
+                allClasses = allClasses.split(" ");
+                let reqClass = (allClasses[4]);
+                reqClass = reqClass.split("-");
+                reqClass = reqClass[1];
+                console.log(reqClass);
+                CURRENT_USER_UID = reqClass;
+                prefillModal();
+            })
+
+
+            // Prefill Modal
+            function prefillModal() {
+                $(".taskDone").hide();
+
+                $("#userType").val(USERS[CURRENT_USER_UID]['type'])
+                $("#userSchoolId").val(USERS[CURRENT_USER_UID]['schoolId'])
+                $("#userName").val(USERS[CURRENT_USER_UID]['name'])
+                $("#userMileStone").val(USERS[CURRENT_USER_UID]['milestone'])
+                $("#userId").val(USERS[CURRENT_USER_UID]['id'])
+                $("#userDOB").val(new Date(USERS[CURRENT_USER_UID]['dob']['seconds']))
+                $("#userClass").val(USERS[CURRENT_USER_UID]['class'])
+            }
+
+            //Update USer
+            $(".updateUser").on('click', async function () {
+                await updateUser()
+            })
+
+            async function updateUser() {
+                const docRef = doc(db, "users", CURRENT_USER_UID);
+
+                // Set the "capital" field of the city 'DC'
+                await updateDoc(docRef, {
+                    type: $("#userType").val(),
+                    schoolId: $("#userSchoolId").val(),
+                    name: $("#userName").val(),
+                    milestone: $("#userMileStone").val(),
+                    id: $("#userId").val(),
+                    class: $("#userClass").val(),
+                });
+
+                $(".taskDone").show();
+
+            }
+
+
+            //Add USER
+            $(".addUser").on('click', async function () {
+                createUserWithEmailAndPassword(auth, ($("#adduserId").val() + "@saathi.com"), $("#adduserPassword").val())
+                    .then((userCredential) => {
+                        // Signed in 
+                        const user = userCredential.user;
+                        console.log(user)
+
+                        // Add new Doc in users collection
+                        setDoc(doc(db, "users", user.uid), {
+                            class: $("#adduserClass").val(),
+                            completedContent: {},
+                            currentContent: [],
+                            deviceToken: "",
+                            dob: Timestamp.fromDate(new Date($("#adduserDOB").val())),
+                            id: $("#adduserId").val(),
+                            lang: "eng",
+                            level: 1,
+                            milestone: 0,
+                            name: $("#adduserName").val(),
+                            reflections: [],
+                            schoolId: $("#adduserSchoolId").val(),
+                            type: $("#adduserType").val(),
+                            uid: user.uid
+                        });
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        // ..
+                    });
+            })
+
+        });
+
+
+
+        // View USER Details
+
+    </script>
+
+</body>
+
+</html>
